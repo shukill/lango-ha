@@ -2,18 +2,11 @@ package com.xbh.simplewhiteboarddemo;
 
 import android.app.Activity;
 import android.app.ActivityOptions;
-import android.content.BroadcastReceiver;
-import android.content.Context;
 import android.content.Intent;
-import android.content.IntentFilter;
 import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
-import android.graphics.Canvas;
-import android.graphics.Path;
 import android.os.Bundle;
-import android.content.res.Configuration;
 import android.graphics.Rect;
-import android.os.Build;
 import android.os.Handler;
 
 import android.text.TextUtils;
@@ -25,12 +18,10 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.xbh.annotation.AnnotationService;
 import com.xbh.whiteboard.AccelerateDraw;
 
 import java.lang.reflect.Method;
-import java.util.ArrayList;
-import java.util.List;
+
 
 /**
  * @author LANGO
@@ -42,7 +33,6 @@ public class MainActivity extends AppCompatActivity {
     private Button mBt0;
     private Button mBt1;
     private Button mBt2;
-    private Button mBt3;
     private TextView tv;
 
 
@@ -77,7 +67,6 @@ public class MainActivity extends AppCompatActivity {
         mBt2 = findViewById(R.id.bt_clean);
         mBt2.setOnClickListener(new BtCheckListener());
 
-        findViewById(R.id.bt_annotation).setOnClickListener(new BtCheckListener());
     }
 
     private class BtCheckListener implements View.OnClickListener {
@@ -95,14 +84,6 @@ public class MainActivity extends AppCompatActivity {
                 case R.id.bt_clean:
                     Log.d(TAG, "clean is click");
                     drawSurfaceView.cleanSurfaceView();
-                    break;
-                case R.id.bt_annotation:
-
-                    moveTaskToBack(true);
-                    AccelerateDraw.getInstance().accelerateDeInit();
-                    AccelerateDraw.getInstance().accelerateDeInit();
-                    startService(new Intent(MainActivity.this, AnnotationService.class));
-
                     break;
                 default:
                     break;

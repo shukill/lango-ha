@@ -9,7 +9,9 @@
     <com.xbh.simplewhiteboarddemo.DrawSurfaceView
         android:id="@+id/drawSv"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="-29dp"
+        tools:layout_editor_absoluteY="0dp" />
 
     <TextView
         android:id="@+id/tv_version"
@@ -25,40 +27,36 @@
         android:id="@+id/bt_pen"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="画笔"
+        android:layout_marginLeft="48dp"
+        android:layout_marginBottom="16dp"
+        android:text="Pen"
         android:textColor="#ffffffff"
         android:textSize="30sp"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"/>
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent" />
 
     <Button
         android:id="@+id/bt_eraser"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="橡皮擦"
+        android:layout_marginLeft="20dp"
+        android:layout_marginBottom="16dp"
+        android:text="Eraser"
         android:textColor="#ffffffff"
         android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toRightOf="@id/bt_pen"/>
+        app:layout_constraintLeft_toRightOf="@id/bt_pen" />
 
     <Button
         android:id="@+id/bt_clean"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="清空"
+        android:layout_marginLeft="16dp"
+        android:layout_marginBottom="16dp"
+        android:text="Clear"
         android:textColor="#ffffffff"
         android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toRightOf="@id/bt_eraser"/>
-
-    <Button
-        android:id="@+id/bt_annotation"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="open_annotation"
-        android:textColor="#ffffffff"
-        android:textSize="30sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toRightOf="@id/bt_clean"/>
+        app:layout_constraintLeft_toRightOf="@id/bt_eraser" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

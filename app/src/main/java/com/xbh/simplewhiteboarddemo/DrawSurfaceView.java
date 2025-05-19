@@ -5,29 +5,23 @@ import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
 import android.graphics.Color;
-import android.graphics.Matrix;
 import android.graphics.Paint;
 import android.graphics.Path;
+
 import android.graphics.PixelFormat;
 import android.graphics.Rect;
 import android.graphics.RectF;
-import android.graphics.Region;
 import android.os.Handler;
 import android.util.AttributeSet;
 import android.util.Log;
 import android.util.SparseArray;
 import android.view.MotionEvent;
-import android.view.SurfaceControl;
 import android.view.SurfaceHolder;
 import android.view.SurfaceView;
-import android.view.View;
 import android.view.ViewTreeObserver;
-import android.view.WindowManager;
 
-import com.xbh.annotation.Constants;
 import com.xbh.whiteboard.AccelerateDraw;
 
-import java.lang.reflect.Method;
 import java.util.List;
 
 /**
@@ -42,10 +36,10 @@ public class DrawSurfaceView extends SurfaceView implements SurfaceHolder.Callba
     private Paint mPaint = null;
     private Rect mScreenRect = null;
     private Bitmap mBgBitmap = null;
-    private Bitmap mCacheBitmap = null;//成熟区，保存的是已经绘制的笔迹
-    private Bitmap mDrawBitmap = null;//刷新区，保存的是书写过程传给加速库的笔迹或板擦
+    private Bitmap mCacheBitmap = null;//Mature area, stores the already drawn strokes
+    private Bitmap mDrawBitmap = null;//Refresh area, stores the strokes or eraser marks being passed to the acceleration library during writing
     private Canvas mCacheCanvas = null;
-    private Canvas mDrawCanvas = null;//书写画布
+    private Canvas mDrawCanvas = null;//Drawing canvas
 
     private AEraser mFingerEraser;
     private AEraser mGestureEraser;

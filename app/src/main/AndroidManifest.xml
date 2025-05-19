@@ -24,11 +24,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-        <service android:name="com.xbh.annotation.AnnotationService"
-            android:process=":annotation"
-            android:exported="true"
-            />
     </application>
 
 </manifest>
