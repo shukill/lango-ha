@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">SimpleWhiteBoardDemo</string>
+    <string name="control" >Control UI</string>
+    <string name="stylus_hand" >Stylus writing And hand control UI</string>
+    <string name="onlyDraw" >Only draw</string>
+    <string name="close" >Close</string>
+</resources>
